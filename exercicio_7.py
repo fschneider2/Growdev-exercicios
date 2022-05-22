@@ -1,3 +1,7 @@
+# Escreva um algoritmo que leia a idade de uma pessoa expressa em anos, 
+# meses e dias e mostre-a expressa apenas em dias. Considere ano = 365 dias, 
+# mês = 31 dias.
+
 print('Informe quantos anos, meses e dias você tem')
 idade_pessoa_anos = int(input('Anos: '))
 idade_pessoa_meses = int(input('Meses: '))
