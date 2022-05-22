@@ -1,5 +1,5 @@
 # Escreva um programa que receba como entrada a quantidade de torcedores do time X, 
-# do time Y e do time Z, calcula e exibe qual a porcentagem de torcedores de cada time.
+# do time Y e do time Z, calcula e exibe qual a porcentagem de torcedores de cada time..
 
 time_x = int(input('Informe a quantidade de torcedores do time x: '))
 time_y = int(input('Informe a quantidade de torcedores do time y: '))

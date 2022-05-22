@@ -4,7 +4,7 @@
 
 # Modificação 2 – Paulo tem o hábito de guardar 10% de tudo que fatura numa caderneta de poupança, 
 # para eventuais necessidades no futuro. Sabendo disso, modifique o algoritmo que você criou 
-# para que ele informe quanto do total faturado deve ser poupado.
+# para que ele informe quanto do total faturado deve ser poupado..
 
 print('Olá Paulo, vamos calcular o total faturado pela sua padaria no dia de hoje,informe a baixo a quantidade de cada item vendido e após o valor.')
 pao_frances = int(input('Pão Frances: '))

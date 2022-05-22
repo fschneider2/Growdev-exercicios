@@ -1,6 +1,6 @@
 # Escreva um programa que receba a posição de dois pontos em um espaço 2D, 
 # ou seja, cada ponto tem coordenadas x e y, e calcule a distância entre esses dois pontos, 
-# exibindo-a na tela.
+# exibindo-a na tela..
 from math import sqrt
 print('Informe as coordenadas do ponto 1 :')
 ponto1_x = float(input('X '))

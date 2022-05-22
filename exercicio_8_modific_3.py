@@ -3,7 +3,7 @@
 # foram vendidas pelo Paulo num dia e calcule o total faturado.
 
 # Modificação 3 – Modifique o algoritmo para que, antes de calcular quanto deve ser guardado na 
-# poupança, ele desconte o valor do imposto devido, que é de 5%.
+# poupança, ele desconte o valor do imposto devido, que é de 5%..
 # 
 
 print('Olá Paulo, vamos calcular o total faturado pela sua padaria no dia de hoje,informe a baixo a quantidade de cada item vendido e após o valor.')
