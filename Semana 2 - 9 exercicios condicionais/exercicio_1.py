@@ -25,3 +25,28 @@
 # ● numero1 == 100 or numero1 > numero3
 # ● numero1 < 10 or numero3 > 10
 # ● numero1 == 30 and numero2 == 100 or numero3 == 100
+numero1 = 300
+numero2 = 100
+numero3 = 5
+string1 = 'Rinoceronte'
+string2 = 'Zebra'
+string3 = 'bug'
+
+print(bool(numero1 == numero3))
+print(bool(numero1 > numero3))
+print(bool(numero2 < numero3))
+print(bool(numero1 == string1))
+print(bool(numero1 == "Um"))
+print(bool(numero1 == "Trezentos"))
+print(bool(numero1 == "300"))
+print(bool(string2 == "Dois"))
+print(bool(string1 == "Rinoceronte"))
+print(bool(string3 != "Rinoceronte"))
+print(bool(string3 != "Rinoceronte" or numero1 > 1000))
+print(bool(numero2 <= numero1 / 3))
+print(bool(numero1 >= 200))
+print(bool(numero1 >= numero2 + numero3))
+print(bool(numero1 > numero2 and numero1 < numero3))
+print(bool(numero1 == 100 or numero1 > numero3))
+print(bool(numero1 < 10 or numero3 > 10))
+print(bool(numero1 == 30 and numero2 == 100 or numero3 == 100))

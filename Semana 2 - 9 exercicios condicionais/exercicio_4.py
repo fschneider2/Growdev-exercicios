@@ -7,3 +7,14 @@
 # d) Se um cliente comprar 3 livros, ele ganhará 30 pontos.
 # e) Se um cliente comprar 4 ou mais livros, ele ganhará 60 pontos.
 # Crie um algoritmo que leia o número de livros
+quantidade_livros = int(input('Quantos livros você comprou? :'))
+if quantidade_livros == 0:
+    print('Você ganhou 0 pontos')
+elif quantidade_livros == 1:
+    print('Você ganhou 5 pontos')
+elif quantidade_livros == 2:
+    print('Você ganhou 15 pontos')
+elif quantidade_livros == 3:
+    print('Você ganhou 30 pontos')
+elif quantidade_livros >= 4:
+    print('Você ganhou 60 pontos')
