@@ -6,3 +6,5 @@ if formula == 1:
     print('Impar')
 else:
     print('Par')
+
+

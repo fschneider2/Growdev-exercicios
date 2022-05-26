@@ -25,9 +25,9 @@
 # ● numero1 == 100 or numero1 > numero3
 # ● numero1 < 10 or numero3 > 10
 # ● numero1 == 30 and numero2 == 100 or numero3 == 100
-numero1 = 300
-numero2 = 100
-numero3 = 5
+numero1 = int(300)
+numero2 = int(100)
+numero3 = int(5)
 string1 = 'Rinoceronte'
 string2 = 'Zebra'
 string3 = 'bug'

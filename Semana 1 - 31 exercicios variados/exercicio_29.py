@@ -13,7 +13,7 @@ moeda_010 = resto_025 / 0.10
 resto_010 = resto_025 % 0.10
 moeda_005 = resto_010 / 0.05
 resto_005 = resto_010 % 0.05
-moeda_001 = resto_005 / 0.01
+moeda_001 = round(resto_005 / 0.01, 2)
 resto_001 = resto_005 % 0.01
 if(moeda_1 > 0):
     print('Moedas de R$ 1,00 = ',int(moeda_1))
