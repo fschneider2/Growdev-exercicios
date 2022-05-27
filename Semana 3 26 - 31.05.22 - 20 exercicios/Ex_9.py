@@ -1,7 +1,5 @@
-# Após construir o algoritmo anterior, crie mais duas versões dele para prever
-# as seguintes situações:
-# a) Um aluno pode ficar em recuperação se possuir frequência suficiente
-# (superior a 75%) e média superior a 5 mas inferior a 7;
-# b) Caso um aluno reprove por média e faltas, sua situação deve ser
-# “Reprovado por Média e Faltas” (ao invés de simplesmente
-# “Reprovado por Faltas” como antes).
+# Escreva um programa que peça ao usuário para fornecer um dia, mês e o
+# ano arbitrários e determine se esses dados correspondem a uma data válida.
+# Não deixe de considerar que existem meses com 30 e 31 dias, e que
+# fevereiro pode ter 28 ou 29 dias, dependendo se o ano for bissexto.
+# Considere que um ano é bissexto quando for divisível por 4.
