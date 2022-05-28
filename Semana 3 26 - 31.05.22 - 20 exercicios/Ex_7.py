@@ -67,7 +67,7 @@ else:
         b = float(input('Você digitou errado, digite sua nota de 0 a 10: '))
 
     c = float(input('Digite a terceira nota: '))
-    while a > 10:
+    while c > 10:
         c = float(input('Você digitou errado, digite sua nota de 0 a 10: '))
 
     d = float(input('Digite a quarta nota: '))
