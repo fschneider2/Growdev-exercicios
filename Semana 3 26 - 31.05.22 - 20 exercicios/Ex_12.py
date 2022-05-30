@@ -12,3 +12,24 @@
 # Com base nessas informações, crie um algoritmo para ler o número total de
 # mensagens enviadas por um usuário. Ao final, calcule o valor da conta e
 # mostre todos os dados, incluindo o valor da conta com e sem impostos.
+
+quantidade = int(input('Vamos calcular o total de sua conta, informe quantos SMS você enviou: '))
+
+fixo = 5
+
+unidade = 0
+
+total = quantidade * unidade + fixo
+if quantidade > 60 and quantidade <= 180:
+    unidade = 0.05
+    total = quantidade * unidade + fixo - 3.0
+elif quantidade > 180:
+    unidade = 0.10
+    total = quantidade * unidade + fixo - 12
+
+total_com_imposto = total / .88
+
+custo_imposto = total_com_imposto - total
+
+print('Você enviou {} SMS, irá pagar: R$ {:.5} | sendo R$ {:.4} referente ao serviço e R$ {:.4}'
+                        ' de imposto.'.format(quantidade, total_com_imposto, total, custo_imposto,))

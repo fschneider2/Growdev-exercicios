@@ -8,3 +8,21 @@
 # muito baixo.
 # Dica: Para gerar um número aleatório utilize a função randint do módulo
 # random.
+import random
+
+print('Vamos brincar de adivinhação? informe um número inteiro de 0 a 20: ')
+numero_usuario = int(input())
+while numero_usuario < 0 or numero_usuario > 20:
+    numero_usuario = int(input('Informe um número de 0 - 20: '))
+
+numero_aleatorio = random.randint(0, 20)
+
+if numero_aleatorio == numero_usuario:
+    print('você acertou! o número {} foi o sorteado'.format(numero_aleatorio))
+
+elif numero_aleatorio > numero_usuario:
+    print('Chutou baixo, o numero sorteado foi: {} e você informou: {}'.format(numero_aleatorio, numero_usuario))
+
+else:
+    print('Chutou alto, o numero sorteado foi: {} e você informou: {}'.format(numero_aleatorio, numero_usuario))
+
