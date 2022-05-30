@@ -7,11 +7,11 @@
 
 #                 Números Correspondentes                              |Número de pontos
 
-# Nenhum número coincidente                                            |0
-# Acertar um número                                                    |10
+# Nenhum número coincidente                                            |0 ### 
+# Acertar um número                                                    |10 ###
 # Acertar dois números                                                 |100 
 # Acertar os três números, mas não na mesma ordem em que foram gerados |1000                                                                    |
-# Acertar três números na mesma ordem que os números aleatórios        |1.000.000
+# Acertar três números na mesma ordem que os números aleatórios        |1.000.000 ###
 
 import random
 
@@ -32,21 +32,47 @@ n3 = int(input('Palpite 3: '))
 while n3 < 0 or n3 > 9:
     n3 = int(input('Erro. Informe um numero de 0 - 9: '))
 
-aleatorio1 = 1
-aleatorio2 = 2
-aleatorio3 = 3
+# ainda em testes:
+al1 = 1
+al2 = 2
+al3 = 3
 
 # aleatorio1 = random.randint(0, 9)
 # aleatorio2 = random.randint(0, 9)
 # aleatorio3 = random.randint(0, 9)
 
-print(aleatorio1, aleatorio2, aleatorio3)
-
-if n1 == aleatorio1 and n2 == aleatorio2 and n3 == aleatorio3:
+# 1.000.000 ###
+if n1 == al1 and n2 == al2 and n3 == al3:
     print('Seus números: {}, {}, {} | Números sorteados: {}, {}, {}| Você acertou os 3 números na ordem sorteada' 
-                            ' - Ganhou 1.000.000 pontos!'.format(n1, n2, n3, aleatorio1, aleatorio2, aleatorio3))
+                            ' - Ganhou 1.000.000 pontos!'.format(n1, n2, n3, al1, al2, al3))
 
-elif n1 != aleatorio1 and n1 != aleatorio2 and n1 != aleatorio3 and n2 != aleatorio1 and n2 != aleatorio2 and n2 != aleatorio3 and n3 != aleatorio1 and n3 != aleatorio2 and n3 != aleatorio3:
+# 1000
+elif n1 == al1 and n1 != al2 and n1 != al3 or n1 != al1 and n1 == al2 and n1 != al3 or n1 != al1 and n1 != al2 and n1 == al3 and n2 != al1 and n2 != al2 and n2 != al3 and n3 != al1 and n3 != al2 and n3 != al3:
+    print('Seus números: {}, {}, {} | Números sorteados: {}, {}, {}| Você acertou 3 números fora de ordem.' 
+                            ' - Ganhou 1000 pontos!'.format(n1, n2, n3, al1, al2, al3))
+
+elif n2 == al1 and n2 != al2 and n2 != al3 or n2 != al1 and n2 == al2 and n2 != al3 or n2 != al1 and n2 != al2 and n2 == al3 and n1 != al1 and n1 != al2 and n1 != al3 and n3 != al1 and n3 != al2 and n3 != al3:
+    print('Seus números: {}, {}, {} | Números sorteados: {}, {}, {}| Você acertou 3 números forma de ordem.' 
+                            ' - Ganhou 1000 pontos!'.format(n1, n2, n3, al1, al2, al3))
+
+elif n3 == al1 and n3 != al2 and n3 != al3 or n3 != al1 and n3 == al2 and n3 != al3 or n3 != al1 and n3 != al2 and n3 == al3 and n1 != al1 and n1 != al2 and n1 != al3 and n2 != al1 and n2 != al2 and n2 != al3:
+    print('Seus números: {}, {}, {} | Números sorteados: {}, {}, {}| Você acertou 3 números fora de ordem.' 
+                            ' - Ganhou 1000 pontos!'.format(n1, n2, n3, al1, al2, al3))
+
+# 10 
+elif n1 == al1 and n1 != al2 and n1 != al3 or n1 != al1 and n1 == al2 and n1 != al3 or n1 != al1 and n1 != al2 and n1 == al3 and n2 != al1 and n2 != al2 and n2 != al3 and n3 != al1 and n3 != al2 and n3 != al3:
+    print('Seus números: {}, {}, {} | Números sorteados: {}, {}, {}| Você acertou 1 número.' 
+                            ' - Ganhou 10 pontos!'.format(n1, n2, n3, al1, al2, al3))
+
+elif n2 == al1 and n2 != al2 and n2 != al3 or n2 != al1 and n2 == al2 and n2 != al3 or n2 != al1 and n2 != al2 and n2 == al3 and n1 != al1 and n1 != al2 and n1 != al3 and n3 != al1 and n3 != al2 and n3 != al3:
+    print('Seus números: {}, {}, {} | Números sorteados: {}, {}, {}| Você acertou 1 número.' 
+                            ' - Ganhou 10 pontos!'.format(n1, n2, n3, al1, al2, al3))
+
+elif n3 == al1 and n3 != al2 and n3 != al3 or n3 != al1 and n3 == al2 and n3 != al3 or n3 != al1 and n3 != al2 and n3 == al3 and n1 != al1 and n1 != al2 and n1 != al3 and n2 != al1 and n2 != al2 and n2 != al3:
+    print('Seus números: {}, {}, {} | Números sorteados: {}, {}, {}| Você acertou 1 número.' 
+                            ' - Ganhou 10 pontos!'.format(n1, n2, n3, al1, al2, al3))
+
+# 0 ###
+elif n1 != al1 and n1 != al2 and n1 != al3 and n2 != al1 and n2 != al2 and n2 != al3 and n3 != al1 and n3 != al2 and n3 != al3:
     print('Seus números: {}, {}, {} | Números sorteados: {}, {}, {}| Você errou os 3 números.' 
-                            ' - Ganhou 0 pontos!'.format(n1, n2, n3, aleatorio1, aleatorio2, aleatorio3))
-
+                            ' - Ganhou 0 pontos!'.format(n1, n2, n3, al1, al2, al3))
