@@ -25,11 +25,11 @@ while n1 < 0 or n1 > 9:
     n1 = int(input('Erro. Informe um numero de 0 - 9: '))
 
 n2 = int(input('Palpite 2: '))
-while n2 < 0 or n2 > 9 and n2 == n1:
+while n2 < 0 or n2 > 9 or n2 == n1:
     n2 = int(input('Erro. Informe um numero de 0 - 9. Não é possivel repetir: '))
 
 n3 = int(input('Palpite 3: '))
-while n3 < 0 or n3 > 9 and n3 == n1 or n3 == n2:
+while n3 < 0 or n3 > 9 or n3 == n1 or n3 == n2:
     n3 = int(input('Erro. Informe um numero de 0 - 9. Não é possivel repetir: '))
 # para teste:
 # aleatorio = [1, 2, 3]
