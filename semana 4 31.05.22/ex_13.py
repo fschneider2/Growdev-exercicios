@@ -13,7 +13,6 @@ for i in range(1, valorN + 1):
         print(' + ', end='') # enquanto o valor de i for menor que o numero informado, ele vai dando o sinal de + 1/1 + 1/2....
     else:
         print('.') # se não, ponto final, acabou essa parte.
-    
     soma += i / m # fiquei em duvida se era necessario, fiz igual.
     m += 2
 print(f"A soma da série é: {soma:.2f}")
