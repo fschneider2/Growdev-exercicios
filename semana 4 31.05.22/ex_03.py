@@ -7,13 +7,10 @@ n = int(input('Informe um numero maior que 0: '))
 
 somatorio = 1
 
-
-
-
 for x in range(1, n + 1):
     fatorial = 1
     for valor in range(x, 1, -1):
         fatorial = fatorial * valor
-    somatorio = somatorio +1/ fatorial
+    somatorio = somatorio + 1 / fatorial
 
 print(f'E = {somatorio}')
