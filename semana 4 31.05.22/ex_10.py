@@ -6,7 +6,7 @@ lista_numeros = []
 # igual exercicio 7, com uma saída diferente..
 while contador <= 10:
 
-    numero = int(input('Digite 10 valores, no fim vou lhe informar o maior e o menor: '))
+    numero = int(input('Digite 10 valores, no fim vou lhe informar o somatório: '))
     lista_numeros.append(numero)
     contador += 1
 
