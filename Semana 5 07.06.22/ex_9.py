@@ -5,3 +5,6 @@
 # d) Porcentagem de acertos em Navios
 # e) Acertos ininterruptos (maior quantidade de acertos em sequência)
 
+import os
+
+os.system('clear')

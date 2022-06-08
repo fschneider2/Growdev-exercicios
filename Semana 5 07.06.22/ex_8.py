@@ -9,3 +9,6 @@
 # serem distribuídos, o programa deve pedir ao usuário uma posição do tabuleiro e informar se ele acertou um navio ou água e repetir o procedimento
 # até que o usuário derrote todos os navios ou chegue ao limite de 35 tentativas.
 
+import os
+
+os.system('clear')

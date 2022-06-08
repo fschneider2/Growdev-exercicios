@@ -20,3 +20,6 @@
 # Entre R$ 5.500,00 e R$ 7.999,99       16%
 # Acima de R$ 8.000,00                  20
 
+import os
+os.system('clear')
+
