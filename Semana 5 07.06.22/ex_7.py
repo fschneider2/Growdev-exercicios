@@ -22,68 +22,79 @@
 # Acima de R$ 8.000,00                  20%
 
 import os
-
+from time import sleep
 os.system('clear')
 
-informações = {'Nome': nomes, 'Salario'}
-emp = []
-qHoras = []
-s_bruto = []
-s_liquido = []
-imp = []
+empregado = []
+quantidade_horas = []
+salario_bruto = []
+salario_liquido = []
+valor_imposto = []
+percent_imposto = []
+encerrar = 0 
 
-p1 = 10
-p2 = 13
-p3 = 16
-p4 = 20
+print('\nVamos calcular a folha de pagamento: informe a baixo niterableome, valor da hora e quantidade de horas trabalhadas.')
 
-finalPrograma = False
-
-def calc_salario(valor_salario, quantidade_horas):
-    salario_bruto = valor_salario * quantidade_horas
-    s_bruto.append(salario_bruto)
-
-    if salario_bruto < 3.000:
-        imposto = salario_bruto * 0.10
-        imp.append(imposto)
-        salario_liquido = salario_bruto - imposto
-        s_liquido.append(salario_liquido)
-
-    elif salario_bruto >= 3.000 and salario_bruto < 5.500:
-        imposto = salario_bruto * 0.13
-        imp.append(imposto)
-        salario_liquido = salario_bruto - imposto
-        s_liquido.append(salario_liquido)
-
-    elif salario_bruto >= 5.500 and salario_bruto < 8.000:
-        imposto = salario_bruto * 0.16
-        imp.append(imposto)
-        salario_liquido = salario_bruto - imposto
-        s_liquido.append(salario_liquido)
-
-    else: 
-        imposto = salario_bruto * 0.20
-        imp.append(imposto)
-        salario_liquido = salario_bruto - imposto
-        s_liquido.append(salario_liquido)
-
-print('\nVamos calcular a folha de pagamento: informe a baixo nome, valor da hora e quantidade de horas trabalhadas. Para encerrar, digite exit no campo nome do funcionario\n')
-
-while finalPrograma == False:
-    
-    os.system('clear')
-
-    nomes = str(input('\nNome do funcionario: '))
+while encerrar == 0:
+    nome = input('\nNome do funcionario: ')
+    empregado.append(nome)
     valor = float(input('\nValor hora: R$ '))
     hora = float(input('\nQuantidade de horas trabalhadas: '))
-    sal = calc_salario(valor, hora)
-    print('\nFuncionario {nomes}:')
-    print(f'\nSalario Bruto: R$ {salario_bruto}')
+    quantidade_horas.append(hora)
 
-
-    
-
+    sleep(0.5)
     os.system('clear')
-    if nomes == '0':
-        finalPrograma = True
+
+    bruto = valor * hora
+    salario_bruto.append(bruto)
+
+    if bruto < 3000:
+        imposto = bruto * 0.10
+        valor_imposto.append(imposto)
+        liquido = bruto - imposto
+        salario_liquido.append(liquido)
+        percent_imposto = 10
+        
+    elif bruto >= 3000 and bruto < 5500:
+        imposto = bruto * 0.13
+        valor_imposto.append(imposto)
+        liquido = bruto - imposto
+        salario_liquido.append(liquido)
+        percent_imposto = 13
+            
+    elif bruto >= 5500 and bruto < 8000:
+        imposto = bruto * 0.16
+        valor_imposto.append(imposto)
+        liquido = bruto - imposto
+        salario_liquido.append(liquido)
+        percent_imposto = 16
+            
+    else: 
+        imposto = bruto * 0.20
+        valor_imposto.append(imposto)
+        liquido = bruto - imposto
+        salario_liquido.append(liquido)
+        percent_imposto = 20
+
+    print(f'\nFolha do funcionario {nome}:')
+    print(f'\nSalario Bruto: R$ {salario_bruto}')
+    print(f'\nImposto para este funcionario é {percent_imposto} %, que equivale a: R$ {valor_imposto} ')
+    print(f'\nSalario Liquido: R$ {salario_liquido}')
+
+    sair = int(input('\nPara encerrar digite [0], para continuar digite [1]: '))
+    if sair == 0:
+        encerrar +=1
+    else:
+        pass
+
+    sleep(0.5)
+    os.system('clear')
+
+print('--------------Programa encerrado--------------')
+print('\nInformações da folha de pagameto: ')
+print(f'\nHoras totais trabalhadas: {sum(quantidade_horas)}')
+print(f'\nTotal folha de pagamento bruta: R$ {sum(salario_bruto)}')
+print(f'\nTotal de impostos: R$ {sum(valor_imposto)}')
+print(f'\nFolha de pagamento liquida total: {sum(salario_liquido)}')
+    
 
