@@ -38,7 +38,7 @@ print('----Vamo jogar!----')
 
 print(f'\nVocê possui 35 chances para acertar os 20 navios que estão distribuidos no tabuleiro, '
                             'o tabuleiro possui 20 linhas e 20 colunas, para jogar informe a linha e a coluna.\n')
-
+print(tabuleiro)
 sleep(4)
 os.system('clear')
 
