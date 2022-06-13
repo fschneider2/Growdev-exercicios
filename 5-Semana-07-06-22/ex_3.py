@@ -1,4 +1,8 @@
 # Modifique o programa anterior para que utilize apenas uma lista e em cada posição da lista armazene um dicionário com o nome e a média
+import os
+
+os.system('clear')
+
 alunosAprovados = []
 
 alunosEnotas = []
@@ -19,5 +23,3 @@ for i in range(5):
        
 
 print(f'Os alunos aprovados são: {alunosAprovados}')
-
-os.system('clear')
