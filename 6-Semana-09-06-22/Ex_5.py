@@ -3,8 +3,12 @@
 
 # Por exemplo, veja um quadrado mágico de lado 3, com números de 1 a 9:
 # 8  3  4
-# 1  5  9
+# 1  5  9 
 # 6  7  2
 
 # Elabore uma função que identifica e mostra na tela todos os quadrados mágicos com as características acima. Dica: produza todas as combinações
 # possíveis e verifique a soma quando completar cada quadrado.
+
+import os
+
+os.system('clear')

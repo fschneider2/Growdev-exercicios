@@ -10,3 +10,7 @@
 # Saída: d _ d _ _
 
 # Se completar a frase o usuário ganha o jogo, se sua pontuação zerar ele perde o jogo. Ao iniciar o jogo, a pontuação é de 4 pontos.
+
+import os
+
+os.system('clear')

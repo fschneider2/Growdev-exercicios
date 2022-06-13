@@ -4,30 +4,39 @@
 # valores fora da faixa forem informados, eles devem ser modificados para
 # valores dentro da faixa
 
+import os
 
-tabuleiro = [[] + ['|' * 10]] 
-# linha = int(input('Digite a linha: '))
-# while linha < 0 or linha > 19:  
-#     linha = int(input('Digite a linha de 0 a 19: '))
-   
-# coluna = int(input('Digite a coluna: ')) 
-# while coluna < 0 or coluna > 19:
-#     coluna = int(input('Digite a coluna de 0 a 19: '))
-
-# retangulo = [['-' for i in range(linha -1)] '|' for i in range(coluna)]
-
-# a = '\n|' *10
-# b = '-' *20
-# c = '\n|' *10
-# d = '-'*20
-# e = '+'
-# e = b + c + d 
-# print(e)
-
-lista = [[-,-,-],[|,+,|],[|,+,|],[|,+,|],[-,-,-]]
-
-for i in lista:
-    print(i)
+os.system('clear')
+from random import randint
 
 
-# print(lista[0][1])
+linha = int(input('informe a linha: '))
+while linha < 1 or linha > 20:
+    linha = randint(1, 20)
+coluna = int(input('informe a coluna: '))
+while coluna < 1 or coluna > 20:
+    coluna = randint(1, 20)
+
+def retangulo(a, b):
+    if a > b:
+        limite = b
+        sup_inf = ('-')
+        sup_inf = (sup_inf * (a + 4))
+        print(sup_inf)
+        for i in range(0, b):
+            print('|', ('+' * a).ljust(limite), '|')
+        print(sup_inf)
+
+    elif b > a:
+        limite = a
+        sup_inf = ('-')
+        sup_inf = (sup_inf * (a + 4))
+        print(sup_inf)
+        for i in range(0, b):
+            print('|', ('+' * a).ljust(limite), '|')
+        print(sup_inf)
+
+c = retangulo(linha, coluna)
+
+
+
