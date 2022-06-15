@@ -36,7 +36,7 @@ def retangulo(a, b):
             print('|', ('+' * a).ljust(limite), '|')
         print(sup_inf)
 
-c = retangulo(linha, coluna)
+c = retangulo(coluna, linha)
 
 
 
