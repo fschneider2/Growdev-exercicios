@@ -11,6 +11,34 @@
 
 # Se completar a frase o usuário ganha o jogo, se sua pontuação zerar ele perde o jogo. Ao iniciar o jogo, a pontuação é de 4 pontos.
 
+
+# minha resposta é uma variação do enunciado, executei um codigo para realizar um jogo parecido com o do game termoo <https://term.ooo/>
+
 import os
+import random
 
 os.system('clear')
+
+palavras = ['FATOS','JOGOS','GANHA','BARCO']
+palavras_usadas = []
+chances = 5
+
+palavra_escolhida = random.choice(palavras)
+
+palavras.remove(palavra_escolhida)
+
+palavras_usadas.append(palavra_escolhida)
+if palavra_escolhida == palavras_usadas:
+    palavra_escolhida = random.choice(palavras)
+
+
+print(palavra_escolhida)
+print(palavras)
+
+
+
+
+
+
+# def analisar_palavra_usuario(a):
+    
