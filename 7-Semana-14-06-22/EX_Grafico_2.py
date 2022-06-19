@@ -1,54 +1,38 @@
 # Exiba um gráfico que mostre a quantidade total de compras agrupadas por anos.
 from funcoes import importar_arquivo, dicionario_e_int
-# import os
-# os.system('clear')
-
-dados = importar_arquivo()
-info = dicionario_e_int(dados)
-
-
-# Enunciado:
-# 2) Exiba um gráfico que mostre a quantidade total de compras
-# agrupadas por anos.
-
 from dash import Dash, html, dcc
 import plotly.express as px
 import pandas as pd
 
-# chamada da funcao de leitura de arquivo
+dados = importar_arquivo()
+info = dicionario_e_int(dados)
 
-total_sales_for_year = []
-years = []
+repeticoes = []
+ano = []
 
-for data in info:
-    if data['ano'] in years:
-        for j in total_sales_for_year:
-            if j[0] == data['ano']:
-                j[1] += data['compra']
+for i in info:
+    if i['ano'] not in ano:
+        repeticoes.append([i['ano'],1])
+        ano.append(i['ano'])
     else:
-        years.append(data['ano'])
-        total_sales_for_year.append([data['ano'], data['compra']])
+        for j in repeticoes:
+            if j[0] == i['ano']: 
+                j[1] += 1
 
-total_sales_for_year.sort()
-
+repeticoes.sort()
 
 app = Dash(__name__)
 
-# assume you have a "long-form" data frame
-# see https://plotly.com/python/px-arguments/ for more options
 df = pd.DataFrame({
-    "ano": [y[0] for y in total_sales_for_year],
-    "valores": [s[1] for s in total_sales_for_year]
-    
+    'anos': [y[0] for y in repeticoes],
+    'total de compras': [s[1] for s in repeticoes]
 })
 
-fig = px.bar(df, x="ano", y="valores")
-fig.update_traces(textposition='inside', textinfo='percent+value+label')
-app.layout = html.Div(children=[
-    html.H1(children='Comparativo de quantidade de Homens e Mulheres'),
+fig = px.bar(df, x='anos', y='total de compras', text_auto=True)
 
-    html.Div(children='''
-        Dash: A web application framework for your data.
+app.layout = html.Div(children=[
+    html.H3(children='''
+      Total de compras por ano.
     '''),
 
     dcc.Graph(

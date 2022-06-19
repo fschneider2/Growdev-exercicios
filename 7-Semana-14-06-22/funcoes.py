@@ -15,7 +15,7 @@ def importar_arquivo():
     return dados
 
 def dicionario_e_int(a):
-    info = []
+    info = [] # Função para converter a lista em dicionario e algumas colunas em int
     for i in range(1, len(a)): 
         info.append(
             {
@@ -31,8 +31,14 @@ def dicionario_e_int(a):
     return info
 
 def filtrar_anos(a):
-    anos = []
+    anos = [] # função para filtrar os anos 
     for i in a:
         anos.append(i['ano'])
-    anos = sorted(set(anos))
+    anos = sorted(set(anos)) # limpando a lista e removendo informações repetidas.
     return anos
+
+def converter_RS(val): # converter um valor monetario em float para moeda RS
+    a = '{:,.2f}'.format(float(val))
+    b = a.replace(',','v')
+    c = b.replace('.',',')
+    return c.replace('v','.')

@@ -8,7 +8,7 @@
 import os
 os.system('clear')
 
-from funcoes import importar_arquivo, dicionario_e_int
+from funcoes import importar_arquivo, dicionario_e_int, converter_RS
 
 compra_2010_2015 = 0
 
@@ -18,10 +18,12 @@ dados = importar_arquivo()
 info = dicionario_e_int(dados)
 
 for i in info:
-    if i['idade'] <= 25 and i['ano'] >= 2010 and i['ano'] <= 2015:
+    if i['idade'] <= 25 and i['ano'] >= 2010 and i['ano'] <= 2015: 
         compra_2010_2015 += i['compra']
         c += 1
+        
+compra_2010_2015 = converter_RS(compra_2010_2015)
 
-print('+','-'*88,'+')
+print('+','-'*93,'+')
 print(f'| Foram realizadas {c} compras por jovens entre 2010 e 2015. o Valor total é de R$ {compra_2010_2015} |')
-print('+','-'*88,'+')
+print('+','-'*93,'+')

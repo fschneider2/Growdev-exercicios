@@ -1,14 +1,13 @@
 # Mostre a quantidade de homens e mulheres na base de dados.
 
-# import os
-# os.system('clear')
 
+from funcoes import importar_arquivo, dicionario_e_int
 from dash import Dash, html, dcc
 import plotly.express as px
 import pandas as pd
 
-from funcoes import importar_arquivo, dicionario_e_int
 
+# resolução do arquivo 
 homem = 0
 mulher = 0
 
@@ -23,14 +22,13 @@ for i in info:
 
 valores = [homem, mulher]
 
+
+# grafico 
 app = Dash(__name__)
 
-# assume you have a "long-form" data frame
-# see https://plotly.com/python/px-arguments/ for more options
 df = pd.DataFrame({
     "generos": ["Homem","Mulher"],
-    "valores": [homem, mulher]
-    
+    "valores": [homem, mulher]   
 })
 
 fig = px.pie(df, names="generos", values="valores", color="generos")

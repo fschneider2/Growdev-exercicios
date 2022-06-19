@@ -8,7 +8,7 @@
 import os
 os.system('clear')
 
-from funcoes import importar_arquivo, dicionario_e_int
+from funcoes import importar_arquivo, dicionario_e_int, converter_RS
 
 dados = importar_arquivo()
 info = dicionario_e_int(dados)
@@ -23,7 +23,7 @@ ido = 0
 for i in info:
     if i['idade'] <= 25:
         jovens += i['compra']
-        j += 1
+        j += 1 # novamente contadores e comparativos, é possivel utilizar a mesma metodologia do ex_4, porém fiz esse antes de resolver aquela logica. 
     elif i['idade'] <= 59:
         adultos += i['compra']
         a += 1
@@ -31,6 +31,9 @@ for i in info:
         idosos += i['compra']
         ido += 1
 
+jovens = converter_RS(jovens) # convertendo em R$
+adultos = converter_RS(adultos)
+idosos = converter_RS(idosos)
 
 if jovens > adultos and jovens > idosos:
     mensagem = f'| A faixa etaria que mais gasta é a dos jovens, o total gasto por essa faixa etaria foi de R$ {jovens} |'
@@ -39,10 +42,10 @@ elif adultos > jovens and adultos > idosos:
 else:
     mensagem = f'| A faixa etaria que mais gasta é a dos idosos, o total gasto por essa faixa etaria foi de R$ {idosos} |'
 
-print('+','-'*34,'+')
-print(f'| Total de vendas        Valor vendas|\n| Jovens:  {j} vendas    R$ {jovens}  | \n| Adultos: {a} vendas   R$ {adultos} | \n| Idosos:  {ido} vendas    R$ {idosos}  |')
-print('+','-'*34,'+')
+print('+','-'*39,'+')
+print(f'|   Total de vendas       Valor vendas    |\n| Jovens:  {j} vendas    R$ {jovens}  | \n| Adultos: {a} vendas   R$ {adultos} | \n| Idosos:  {ido} vendas    R$ {idosos}  |')
+print('+','-'*39,'+')
 
-print('+','-'*101,'+')
+print('+','-'*104,'+')
 print(mensagem)
-print('+','-'*101,'+')
+print('+','-'*104,'+')

@@ -26,7 +26,7 @@ idosos_din = 0
 for i in info:
 
     if i['idade'] <= 25:
-        if i['pagamento'] == 'credito':
+        if i['pagamento'] == 'credito': # utilizado contadores e compartivos para resolver o problema.
             jovens_c += 1
         elif i['pagamento'] == 'debito':
             jovens_d += 1

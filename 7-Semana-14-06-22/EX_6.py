@@ -19,7 +19,7 @@ idosos = 0
 
 for i in info:
     if i['idade'] <= 25:
-        jovens += 1
+        jovens += 1 # utilizei simples contadores 
 
     elif i['idade'] <= 59:
         adultos += 1
@@ -27,7 +27,7 @@ for i in info:
     else:
         idosos += 1
 
-total = jovens + adultos + idosos
+total = jovens + adultos + idosos # e tirei a prova real aqui
 
 print('+','-'*19,'+')
 print(f'| Total clientes: {total}|\n| Jovens:          {jovens}| \n| Adultos:        {adultos}| \n| Idosos:          {idosos}|')

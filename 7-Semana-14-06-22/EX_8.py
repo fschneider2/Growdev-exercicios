@@ -12,7 +12,7 @@ m = 0
 f = 0
 
 for i in info:
-    if i['sexo'] == 'M' and i['pagamento'] == 'debito':
+    if i['sexo'] == 'M' and i['pagamento'] == 'debito': # utilizei comparativos e contadores 
         m += 1
     elif i['sexo'] == 'F' and i['pagamento'] == 'debito':
         f += 1
