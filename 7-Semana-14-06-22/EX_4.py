@@ -3,16 +3,30 @@
 import os
 os.system('clear')
 
-from funcoes import importar_arquivo, dicionario_e_int
+from funcoes import importar_arquivo, dicionario_e_int, filtrar_anos
 
 dados = importar_arquivo()
 info = dicionario_e_int(dados)
 
-gastos_ano = {}
+ano = []
+soma = []
 
 for i in info:
-    ano = i['ano']
-    gasto = i['compra']
+    if i['ano'] not in ano:
+        ano.append(i['ano'])
+        soma.append([i['ano'], i['compra']]) #
+    else:
+        for j in soma:
+            if j[0] == i['ano']:
+                j[1] += i['compra']
+soma.sort()
+
+for i in soma:
+    print(f'No ano {i[0]} foi gasto o total de {i[1]}')
+
+
+
+
 
 
 
