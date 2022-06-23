@@ -10,9 +10,9 @@ Semana 6 - Exercicios com implementação de funções, apresenta uma evolução
 Semana 7 - Exercicios de analise de dados, com plotagem de graficos.
 Semana 8 - Exercicios de POO(Programação Orientada a Objetos).
 
-Já chegamos aos 107 exercicios!
+Já chegamos aos 107 exercicios + trabalho de conclusão do modulo.
 
-\***************************************************************************************************************************************************************************************/
+*********************************************************************************************
 
 # growdev-exercises
 Growdev - exercises
@@ -26,4 +26,4 @@ Week 6 - Exercises with implementation of functions, presents an evolution in th
 Week 7 - Data analysis exercises, with graph plotting.
 Week 8 - OOP Exercises (Object Oriented Programming).
 
-We've reached 107 exercises!
+We've reached 107 exercises + module completion work.
