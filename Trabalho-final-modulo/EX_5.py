@@ -12,10 +12,10 @@ media_alunos = []
 
 for i in dados:
     if i['ano'] == 2:
-        media_alunos.append(i['media'])
+        media_alunos.append(i['media']) #codigo mais simples que consegui criar, como a média já esta dentro do dicionario proncipal, foi uma simples verificação do ano
 
 
-media = sum(media_alunos) / len(media_alunos)
+media = sum(media_alunos) / len(media_alunos) # calculo da média de todas as notas dos alunos do 2° ano
 
 
 print('Qual a média de todas as notas (do 1º e 2º semestre) dos alunos do 2º ano? \n')
