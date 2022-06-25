@@ -26,6 +26,8 @@ primeiro_ano = alunos_monitoria['alunos_1']
 segundo_ano = alunos_monitoria['alunos_2']
 terceiro_ano = alunos_monitoria['alunos_3']
 
+print(primeiro_ano, segundo_ano, terceiro_ano)
+
 print('Qual dos anos (1º, 2º ou 3º) mais procura a monitoria? \n')
 
 print('Resposta: ')
@@ -46,4 +48,5 @@ y = [primeiro_ano, segundo_ano, terceiro_ano]
     
 fig, ax = pyplot.subplots()
 ax.bar(x, y)
+pyplot.title(f'Qual dos anos (1º, 2º ou 3º) mais procura a monitoria?')
 pyplot.show()

@@ -29,6 +29,7 @@ primeiro_ano = alunos_reprovados['alunos_1']
 segundo_ano = alunos_reprovados['alunos_2']
 terceiro_ano = alunos_reprovados['alunos_3']
 
+print(primeiro_ano, segundo_ano, terceiro_ano)
 
 print('As reprovações são maiores entre os alunos do 1º, 2º ou 3º ano?\n')
 
@@ -51,4 +52,5 @@ y = [primeiro_ano, segundo_ano, terceiro_ano]
     
 fig, ax = pyplot.subplots()
 ax.bar(x, y)
+pyplot.title(f'As reprovações são maiores entre os alunos do 1º, 2º ou 3º ano?')
 pyplot.show()
