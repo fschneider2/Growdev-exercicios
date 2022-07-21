@@ -25,3 +25,7 @@ def dicionario_e_int(a):
             }
         )
     return info
+
+a = importar_arquivo()
+
+print(a)
